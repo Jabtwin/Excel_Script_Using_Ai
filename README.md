@@ -1,24 +1,24 @@
 # 🚀 Google Antigravity Data Engine
 
-![Antigravity Banner](assets/banner.png)
+![App Screenshot](assets/screenshot.png)
 
-**Google Antigravity Data Engine** là một hệ thống phân tích và xử lý dữ liệu siêu tốc, được thiết kế chuyên biệt để tự động hóa các tác vụ làm sạch dữ liệu (Data Cleaning) và tự động sinh mã code (Google Apps Script / Python) bằng trí tuệ nhân tạo.
+**Google Antigravity Data Engine** is an ultra-high-speed data analysis and processing system, specifically designed to automate data cleaning tasks and generate code (Google Apps Script / Python) using the power of Artificial Intelligence.
 
-## ✨ Tính năng nổi bật
-- **Siêu tốc với Polars:** Xử lý hàng triệu dòng dữ liệu dạng bảng (CSV/Excel) chỉ trong chớp mắt, đánh bại hoàn toàn các phần mềm bảng tính truyền thống.
-- **Đầu não AI thông minh:** Tích hợp mô hình Google Gemini (2.5) để tự động phân tích cấu trúc dữ liệu, nhận diện điểm bất thường và đưa ra giải pháp code chuẩn xác.
-- **Giao diện trực quan:** Được xây dựng bằng Streamlit, hỗ trợ thao tác kéo thả file đơn giản và tương tác với AI bằng ngôn ngữ tự nhiên.
+## ✨ Key Features
+- **Lightning Fast with Polars:** Process millions of rows of tabular data (CSV/Excel) in the blink of an eye, completely outperforming traditional spreadsheet software.
+- **Smart AI Brain:** Deeply integrates the Google Gemini (2.5) model to automatically analyze data structures, detect anomalies, and provide accurate coding solutions.
+- **Intuitive UI:** Built with Streamlit, it features a user-friendly drag-and-drop interface and allows direct interaction with AI using natural language.
 
-## 🚀 Hướng dẫn cài đặt (Chạy Local)
-1. Cài đặt các thư viện cần thiết:
+## 🚀 Local Installation
+1. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-2. Đổi tên file `.env.example` thành `.env` và điền `GEMINI_API_KEY` của bạn (Lấy từ Google AI Studio).
-3. Khởi động hệ thống:
+2. Rename `.env.example` to `.env` and insert your `GEMINI_API_KEY` (obtained from Google AI Studio).
+3. Start the application:
    ```bash
    python -m streamlit run app.py
    ```
 
-## 🌐 Trải nghiệm trực tuyến
-Hệ thống có thể được triển khai dễ dàng lên **Streamlit Community Cloud**. Chỉ cần kết nối Repository này, thiết lập biến môi trường `GEMINI_API_KEY` trong mục *Secrets*, và hệ thống sẽ tự động vận hành 24/7.
+## 🌐 Online Deployment
+This system can be easily deployed to **Streamlit Community Cloud**. Simply connect this repository, configure the `GEMINI_API_KEY` environment variable in the *Secrets* section, and the app will run 24/7.
