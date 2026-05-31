@@ -9,11 +9,13 @@ load_dotenv()
 # Lấy API key: Ưu tiên Streamlit secrets (Cloud), sau đó lấy từ biến môi trường (Local)
 try:
     api_key = st.secrets["GEMINI_API_KEY"]
-except (FileNotFoundError, KeyError):
+except Exception:
     api_key = os.getenv("GEMINI_API_KEY")
 
-if api_key:
-    genai.configure(api_key=api_key)
+if not api_key or api_key == "your_api_key_here":
+    raise ValueError("BẠN QUÊN NHẬP API KEY RỒI! Vui lòng vào Cài đặt (Settings) -> Secrets trên Streamlit Cloud để dán mã API Key vào.")
+
+genai.configure(api_key=api_key)
 
 def call_gemini_agent(prompt: str, system_instruction: str = None) -> str:
     """
