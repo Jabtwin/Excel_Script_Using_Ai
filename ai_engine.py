@@ -1,12 +1,17 @@
 import os
+import streamlit as st
 import google.generativeai as genai
 from dotenv import load_dotenv
 
-# Tải các biến môi trường từ file .env
+# Tải các biến môi trường từ file .env (dùng cho Local)
 load_dotenv()
 
-# Lấy API key
-api_key = os.getenv("GEMINI_API_KEY")
+# Lấy API key: Ưu tiên Streamlit secrets (Cloud), sau đó lấy từ biến môi trường (Local)
+try:
+    api_key = st.secrets["GEMINI_API_KEY"]
+except (FileNotFoundError, KeyError):
+    api_key = os.getenv("GEMINI_API_KEY")
+
 if api_key:
     genai.configure(api_key=api_key)
 
