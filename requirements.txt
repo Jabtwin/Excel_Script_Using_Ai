@@ -1,0 +1,7 @@
+streamlit
+polars
+google-generativeai
+python-dotenv
+openpyxl
+xlsxwriter
+fastexcel
