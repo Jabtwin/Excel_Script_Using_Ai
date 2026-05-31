@@ -3,10 +3,10 @@ import os
 from data_processor import read_data, get_data_info
 from ai_engine import call_gemini_agent
 
-st.set_page_config(page_title="Antigravity Data Engine", layout="wide", page_icon="🚀")
+st.set_page_config(page_title="Excel Script Using AI", layout="wide", page_icon="📊")
 
-st.title("🚀 Google Antigravity Data Engine")
-st.markdown("Hệ thống phân tích dữ liệu siêu tốc bằng Polars và AI (Gemini 1.5 Pro).")
+st.title("📊 Excel Script Using AI")
+st.markdown("Hệ thống phân tích và xử lý dữ liệu siêu tốc bằng Polars và AI.")
 
 # Kiểm tra API Key
 try:
