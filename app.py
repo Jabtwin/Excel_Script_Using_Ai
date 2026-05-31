@@ -9,8 +9,13 @@ st.title("🚀 Google Antigravity Data Engine")
 st.markdown("Hệ thống phân tích dữ liệu siêu tốc bằng Polars và AI (Gemini 1.5 Pro).")
 
 # Kiểm tra API Key
-if not os.getenv("GEMINI_API_KEY") or os.getenv("GEMINI_API_KEY") == "your_api_key_here":
-    st.warning("⚠️ Chưa cấu hình GEMINI_API_KEY. Vui lòng thêm vào file .env")
+try:
+    api_key = st.secrets["GEMINI_API_KEY"]
+except (FileNotFoundError, KeyError):
+    api_key = os.getenv("GEMINI_API_KEY")
+
+if not api_key or api_key == "your_api_key_here":
+    st.warning("⚠️ Chưa cấu hình GEMINI_API_KEY. Vui lòng thiết lập trong mục Secrets (Cloud) hoặc file .env (Local)")
 
 # Khu vực Upload File
 uploaded_file = st.file_uploader("Kéo thả file CSV hoặc Excel vào đây", type=["csv", "xlsx"])
